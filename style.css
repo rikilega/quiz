@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background: rgb(12, 11, 11);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#home-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 350px;
+    min-width: 350px;
+    max-width: 600px;
+    padding: 20px;
+    max-height: 600px;
+    background: linear-gradient(to bottom, #5e72e4, #8250c8);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px 6px rgba(197, 187, 187, 0.3);
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.home-buttons {
+    min-height: auto;
+    max-width: 200px;
+    flex: 0 1 90px;
+    border-radius: 7px;
+    border-color:rgb(170, 147, 147);
+    border-width: 0.5px;
+    border-style: solid;
+    box-shadow: 0px 0px 5px 2px rgba(197, 187, 187, 0.3);
+    color: #4e4545;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 20 20;
+    flex-direction: row;
+    min-width: 100%;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.answer-btn {
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 400px;
+    color: #201e1e;
+    border-radius: 10px;
+    box-shadow: 0 5 5 10 black;
+}
+
+#u-wrong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+#u-wrong h1 {
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100%;
+    font-size: 300%;
+}
+
+#pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.scorelist-buttons {
+    background-color:#4e4545;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.scorelist-buttons
+
+#home {
+    min-height: 50px;
+    min-width: 250px;
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 3px #201e1e;
+    background-color: #cfc9c9;
+    font-size: 25px;
+    color: #faf4f4;
+}
+
+#backtostart {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}

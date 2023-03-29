@@ -8,6 +8,9 @@
     <title>Quiz</title>
 </head>
 <body>
+    <div id="u-wrong" style="display: none;">
+        <h1>SORRY,<br>YOU'RE<br>WRONG!!</h1>
+    </div>
     <section id="home-container">
         <h1>Quiz</h1>
         <div id="buttons">
@@ -21,9 +24,30 @@
             <button class="answer-btn" id="choice3"></button>
             <button class="answer-btn" id="choice4"></button>
             <p id="timer">60</p>
-
-    </div>
+        </div>
+        <div id="end-container" style="display: none;">
+            <h1 id="Congrats">Congrats! Your score is</h1>
+            <h2 id="score"></h2>
+            <form>
+                <label for="initials">Enter your initials here</label>
+                <input type="text" id="initials" name="initials" maxlength="3" required>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="scores-container" style="display: none;">
+            <h1>HIGH SCORES</h1>
+            <ol id="high-scores"></ol>
+            <div id="pagination-container">
+                <button class="scorelist-buttons" id="previous">Previous</button>
+                <button class="scorelist-buttons" id="previous">Next</button>
+            </div>
+        </div>
+        <div id="backtostart" style="display: none;">
+            <button id="home">Home</button>
+        </div>
     </section>
+
     
 </body>
 </html>

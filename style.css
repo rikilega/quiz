@@ -7,6 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    min-height: 100vh;
     
 }
 
@@ -63,7 +64,7 @@ h1 {
     padding-bottom: 30px;
     margin-bottom: 10px;
     height: 30px;
-    width: 400px;
+    width: 250px;
     color: #201e1e;
     border-radius: 10px;
     box-shadow: 0 5 5 10 black;
@@ -84,23 +85,32 @@ h1 {
     font-size: 300%;
 }
 
+
+#scores-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #pagination-container {
     display: flex;
-    justify-content: center;
+    
     margin-top: 10px;
 }
 
 .scorelist-buttons {
     background-color:#4e4545;
-    border: none;
-    color: white;
-    padding: 10px 24px;
+    border: 1px solid;
+    /* color: white; */
+    padding: 1px 24px;
     font-size: 20px;
     cursor: pointer;
-    margin: 0 10px;
+    justify-content: space-around;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px,
 }
-
-.scorelist-buttons
 
 #home {
     min-height: 50px;
@@ -118,3 +128,22 @@ h1 {
     justify-content: center;
     padding: 0 20px;
 }
+
+/* #uright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: bottom;
+    flex-direction: column;
+    min-width: 600px; 
+    padding: 20px;
+    max-height: 100px;
+    background: linear-gradient(to bottom, #d4440bd3, #aa8a77);
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+    border-radius:15px;
+    margin: 40px;
+    clear: both;
+}     */
+
+/* #uright {
+    justify-content: bottom;
+} */

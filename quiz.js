@@ -166,6 +166,141 @@ const questions = [
     },
 ];
 
+const positiveMessage = [ 
+    {
+    message: "Do you have a PhD in this?"
+    },
+    {   
+    message: "Did you invent this quiz?"
+    },
+    {   
+    message: "Are you the smartest person in the room?"
+    },   
+    {
+        message: "Do you have a PhD in this?"
+    },
+    {
+        message: "Did you invent this quiz?"
+    },
+    {
+        message: "Are you the smartest person in the room?"
+    },
+    {
+        message: "Is this too easy for you?"
+    },
+    {
+        message: "Have you considered applying to MENSA?"
+    },
+    {
+        message: "Do you know the secrets of the universe?"
+    },
+    {
+        message: "Did you study for this or are you just that good?"
+    },
+    {
+        message: "Are you a robot in disguise?"
+    },
+    {
+        message: "Did you download the answer key?"
+    },
+    {
+        message: "Is this your superpower?"
+    },
+    {
+        message: "Did you eat your Wheaties this morning?"
+    },
+    {
+        message: "Do you know what they put in the water at Hogwarts?"
+    },
+    {
+        message: "Are you the chosen one?"
+    },
+    {
+        message: "Did you take a smart pill today?"
+    },
+    {
+        message: "Do you have a photographic memory?"
+    },
+    {
+        message: "Are you the reincarnation of Einstein?"
+    },
+    {
+        message: "Did you receive an IQ upgrade overnight?"
+    },
+    {
+        message: "Do you have a time machine to go back and study for this?"
+    },
+    {
+        message: "Are you a trivia mastermind?"
+    },
+    {
+        message: "Did you just read my mind for the answer?"
+    },
+    {
+        message: "You're crushing it!"
+    },
+    {
+        message: "You're a genius!"
+    },
+    {
+        message: "Way to go, smarty pants!"
+    },
+    {
+        message: "You're on fire!"
+    },
+    {
+        message: "You nailed it!"
+    },
+    {
+        message: "You're a star!"
+    },
+    {
+        message: "You're a rockstar!"
+    },
+    {
+        message: "You're killing it!"
+    },
+    {
+        message: "You're a pro!"
+    },
+    {
+        message: "You're a champ!"
+    },
+    {
+        message: "You're a wizard!"
+    },
+    {
+        message: "You're a superhero!"
+    },
+    {
+        message: "You're a legend!"
+    },
+    {
+        message: "You're a boss!"
+    },
+    {
+        message: "You're a mastermind!"
+    },
+    {
+        message: "You're a whiz!"
+    },
+    {
+        message: "You're unstoppable!"
+    },
+    {
+        message: "You're brilliant!"
+    },
+    {
+        message: "You're amazing!"
+    },
+    {
+        message: "You're awesome!"
+    },
+    {
+        message: "You're killing this quiz!"
+    },
+];
+
 const homeButtons = document.getElementById("buttons");
 const startButton = document.getElementById("start");
 const scoresButton = document.getElementById("scores");
@@ -186,11 +321,13 @@ const scoresContainer = document.getElementById("scores-container");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const homeButton = document.getElementById("home");
+const messageElement = document.getElementById("message");
 
 let currentQuestionIndex = 0;
 let score = 0;
 let timerInterval;
 let timeRemaining = 60;
+let currentpositiveMessageIndex = 0;
 
 startButton.addEventListener("click", startQuiz);
 
@@ -215,6 +352,13 @@ function startQuiz() {
     }, 1000);
 }
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function showQuestion() {
     const question = questions[currentQuestionIndex];
     questionElement.textContent = question.question;
@@ -224,12 +368,20 @@ function showQuestion() {
     choice4Button.textContent =question.choices[3];
 }
 
+function showMessage() {
+    shuffle(positiveMessage);
+    const message = positiveMessage[currentpositiveMessageIndex].message;
+    messageElement.textContent = message;
+}
+
 function checkAnswer(event) {
     const selectedAnswer = event.target.textContent;
     const question = questions[currentQuestionIndex];
     if (selectedAnswer === question.answer) {
-        alert("Correct!");
+        //shuffle(positiveMessage);
+        showMessage();
         score++
+        timeRemaining +=7;
     } else {
         timeRemaining -= 10;
         uWrong.style.display = "flex";
@@ -237,11 +389,19 @@ function checkAnswer(event) {
         setTimeout(() => {
             uWrong.style.display = "none";
             homeContainer.style.display = "flex";
-        }, 1000);
+        }, 500);
     }
+
+    currentpositiveMessageIndex++
+        if (currentpositiveMessageIndex < positiveMessage.length) {
+            shuffle(positiveMessage);
+        } else {
+            currentpositiveMessageIndex = 0;
+        }    
     
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
+        shuffle(questions);
         showQuestion();
     } else {
         alert ("You're done my Friend!");
@@ -324,7 +484,7 @@ function showPreviousPage() {
 function showNextPage() {
     const highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
     const totalScores = highScores.length;
-    const totalPages = math.ceil(totalScores / pageSize);
+    const totalPages = Math.ceil(totalScores / pageSize);
 
     if (currentPage < totalPages) {
         currentPage++;

@@ -164,6 +164,61 @@ const questions = [
         choices: ["Peter Gene Hernandez", "Michael Nguyen-Stevenson", "Ray Aguirre", "Bruno Maritza"],
         answer: "Peter Gene Hernandez"
     },
+    {
+        question: "What is JavaScript?",
+        choices: ["A programming language", "A markup language", "A styling language", "All of the above"],
+        answer: "A programming language"
+    },
+    {
+        question: "What is the syntax for a single-line comment in JavaScript?",
+        choices: ["<!-- -->", "//", "/* */", "#"],
+        answer: "//"
+    },
+    {
+        question: "What is the syntax for a multi-line comment in JavaScript?",
+        choices: ["<!-- -->", "//", "/* */", "#"],
+        answer: "/* */"
+    },
+    {
+        question: "What is the purpose of the 'use strict' directive in JavaScript?",
+        choices: ["To enable strict mode", "To disable strict mode", "To add a strict mode warning", "To add a strict mode error"],
+        answer: "To enable strict mode"
+    },
+    {
+        question: "What is the difference between 'let' and 'var' in JavaScript?",
+        choices: ["'let' is block-scoped and 'var' is function-scoped", "'let' is function-scoped and 'var' is block-scoped", "There is no difference", "None of the above"],
+        answer: "'let' is block-scoped and 'var' is function-scoped"
+    },
+    {
+        question: "What is the difference between '==' and '===' in JavaScript?",
+        choices: ["'==' compares value and '===' compares value and type", "'==' compares value and type and '===' compares value", "'==' compares type and '===' compares value and type", "None of the above"],
+        answer: "'==' compares value and '===' compares value and type"
+    },
+    {
+        question: "What is the difference between null and undefined in JavaScript?",
+        choices: ["null is assigned, undefined is not assigned", "undefined is assigned, null is not assigned", "Both represent empty values but have different types", "None of the above"],
+        answer: "Both represent empty values but have different types"
+    },
+    {
+        question: "What is an immediately invoked function expression (IIFE) in JavaScript?",
+        choices: ["A function that is executed immediately after it is defined", "A function that is executed immediately after it is called", "A function that is executed immediately after the window loads", "A function that is executed immediately after the document is ready"],
+        answer: "A function that is executed immediately after it is defined"
+    },
+    {
+        question: "What is the purpose of the 'this' keyword in JavaScript?",
+        choices: ["To refer to the current object", "To refer to the global object", "To refer to the parent object", "To refer to the child object"],
+        answer: "To refer to the current object"
+    },
+    {
+        question: "What is a closure in JavaScript?",
+        choices: ["A function that has access to variables in its outer scope", "A function that has access to variables in its inner scope", "A function that is defined inside another function", "A function that is called immediately after it is defined"],
+        answer: "A function that has access to variables in its outer scope"
+    },
+    {
+        question: "What is the purpose of the 'new' keyword in JavaScript?",
+        choices: ["To create a new object", "To call a function as a constructor", "To delete an object", "To compare two objects"],
+        answer: "To call a function as a constructor"
+    },
 ];
 
 const positiveMessage = [ 
@@ -333,7 +388,7 @@ startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
     homeButtons.style.display = "none";
-    quizContainer.style.display = "flex";
+    quizContainer.style.cssText = "display: flex; height: 600px;"; 
     showQuestion();
     form.addEventListener("submit", function(event) {
         event.preventDefault();

@@ -7,9 +7,8 @@ body {
     /* display: flex;
     align-items: center;
     justify-content: space-around; */
-    min-height: 100vh;
-    
-}
+    height: 100vh;
+    }
 
 #home-container {
     display: flex;
@@ -130,16 +129,25 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #5e72e4, #8250c8);;
-    padding: 20px;
+    background: linear-gradient(to bottom, #5e72e4, #8250c8);
     border-radius: 15px;
     box-shadow: 0px 5px 20px 6px rgba(197, 187, 187, 0.3);
-    margin: 40px;
 }
-
+#score {
+    text-align: center;
+    font-size: 60px;
+}
 #message {
     color: white;
 }
-/* #uright {
-    justify-content: bottom;
-} */
+#end-container label {
+    padding-bottom: 5px;
+}
+
+#textinput {
+    padding-bottom: 10px;
+}
+#submit {
+    margin: auto;
+    border-radius: 5px;
+}

@@ -4,9 +4,6 @@ body {
     margin: 0;
     background: rgb(12, 11, 11);
     color: #fff;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-around; */
     height: 100vh;
     padding-bottom: 30px;
 }
@@ -55,8 +52,9 @@ h1 {
 }
 
 .home-buttons {
-    min-height: auto;
-    max-width: 200px;
+    margin-top: 30px;
+    min-height: 30px;
+    min-width: 200px;
     flex: 0 1 px;
     border-radius: 7px;
     border-color:rgb(170, 147, 147);
@@ -131,18 +129,27 @@ h1 {
     font-size: 20px;
     cursor: pointer;
     width: 100px;
-    border-radius: 10px,
+    border-radius: 6px;
+    min-height: 30px;
+}
+
+.scorelist-buttons:hover {
+    background: rgb(213, 240, 232);
 }
 
 #home {
     min-height: 50px;
     min-width: 250px;
-    margin-top: 10%;
+    margin-top: 1%;
     border-radius: 15px;
     box-shadow: 0 0 10px 3px #201e1e;
     background-color: #cfc9c9;
     font-size: 25px;
     color: #faf4f4;
+}
+
+#home:hover {
+    background-color: #50c8ae;
 }
 
 #backtostart {
@@ -174,4 +181,27 @@ h1 {
 
 #form {
     height: 90px;
+}
+
+#high-scores {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#high-scores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+}
+
+#high-scores li .initials {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 100px;
+    width: 120px;
+    padding-left: 10px;
 }

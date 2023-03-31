@@ -1,4 +1,4 @@
-const questions = [
+const questions2 = [
     {
         question: "How many Infinity Stones are there?",
         choices: ["3", "5", "8", "6"],
@@ -164,6 +164,9 @@ const questions = [
         choices: ["Peter Gene Hernandez", "Michael Nguyen-Stevenson", "Ray Aguirre", "Bruno Maritza"],
         answer: "Peter Gene Hernandez"
     },
+];
+
+const questions = [
     {
         question: "What is JavaScript?",
         choices: ["A programming language", "A markup language", "A styling language", "All of the above"],
@@ -219,106 +222,105 @@ const questions = [
         choices: ["To create a new object", "To call a function as a constructor", "To delete an object", "To compare two objects"],
         answer: "To call a function as a constructor"
     },
-      {
+    {
         question: "What does JavaScript do?",
         choices: ["manipulates HTML and CSS", "manipulates databases", "runs server-side code", "all of the above"],
         answer: "manipulates HTML and CSS"
     },
-      {
+    {
         question: "What is the difference between `var`, `let`, and `const` in JavaScript?",
-       choices: ["they are all the same", "var is block-scoped, let and const are function-scoped", "let is block-scoped, var and const are function-scoped", "const is block-scoped, var and let are function-scoped"],
+        choices: ["they are all the same", "var is block-scoped, let and const are function-scoped", "let is block-scoped, var and const are function-scoped", "const is block-scoped, var and let are function-scoped"],
         answer: "let is block-scoped, var and const are function-scoped"
     },
-      {
+    {
         question: "What is the purpose of the `use strict` directive in JavaScript?",
         choices: ["it forces the use of strict typing in the code", "it enables strict mode, which helps catch coding mistakes", "it improves performance by optimizing the code", "it disables                     certain language features that are prone to errors"],
-         answer: "it enables strict mode, which helps catch coding mistakes"
+        answer: "it enables strict mode, which helps catch coding mistakes"
     },
-      {
+    {
         question: "What is an arrow function in JavaScript?",
         choices: ["a function with a special syntax that allows for shorter and cleaner code", "a function that always returns a boolean value", "a function that can be called with any number           of arguments", "a function that returns a promise object"],
         answer: "a function with a special syntax that allows for shorter and cleaner code"
     },
-      {
+    {
         question: "What is the purpose of the `this` keyword in JavaScript?",
         choices: ["it refers to the current function being executed", "it refers to the global window object", "it refers to the object that the function is a method of", "it refers to the last         variable declared in the code"],
         answer: "it refers to the object that the function is a method of"
     },
-      {
+    {
         question: "What is the difference between ``==` and ``===`` in JavaScript?",
         choices: ["they are the same", "`==` compares values and === compares types and values", "'==' compares types and values and === compares values", "there is no difference"],
         answer: "`==` compares values and === compares types and values"
     },
-      {
+    {
         question: "What is a callback function in JavaScript?",
         choices: ["a function that is executed immediately when called", "a function that is called when an event occurs", "a function that is passed as an argument to another function and             executed later", "a function that is used to create new objects"],
         answer: "a function that is passed as an argument to another function and executed later"
     },
-      {
+    {
         question: "What is the purpose of the `try...catch` statement in JavaScript?",
         choices: ["it allows you to test the speed of your code", "it enables debugging by catching errors and preventing the code from crashing", "it is used to create loops in the code", "it         is used to sort arrays"],
         answer: "it enables debugging by catching errors and preventing the code from crashing"
     },
-      {
+    {
         question: "What is an event listener in JavaScript?",
         choices: ["a function that is called when a user clicks a button", "a function that is called when a key is pressed", "a function that is called when an event occurs on a specified             element", "a function that is used to animate elements on a webpage"],
         answer: "a function that is called when an event occurs on a specified element"
         
     },
-      {
+    {
         question: "What is a closure in JavaScript?",
         choices: ["a function that takes no arguments", "a function that is executed immediately when called", "a function that returns an object", "a function that has access to variables in           its outer scope"],
         answer: "a function that has access to variables in its outer scope"
     },
-      {
+    {
         question: "What is the difference between `slice` and `splice` in JavaScript?",
         choices: ["they are the same", "slice returns a new array with selected elements and splice modifies the original array", "slice modifies the original array and splice returns a new             array with selected elements", "slice and splice both modify the original array"],
         answer: "slice returns a new array with selected elements and splice modifies the original array"
         
     },
-      {
+    {
         question: "What is the purpose of the `prototype` property in JavaScript?",
         choices: ["it allows you to create new variables", "it is used to define the behavior of an object", "it is used to create new arrays", "it is used to define the styling of a webpage"],
         answer: "it is used to define the behavior of an object"
         
     },    
-      {
+    {
         question: "What is the difference between `map` and `forEach` in JavaScript?",
         choices: ["they are the same", "map returns a new array and forEach does not", "forEach returns a new array and map does not", "map and forEach both modify the original array"],
         answer: "map returns a new array and forEach does not"
         
     },
-      {
+    {
         question: "What is a promise in JavaScript?",
         choices: ["a guarantee that a function will return a value", "a function that is executed immediately when called", "a function that is used to handle errors", "an object that                   represents the eventual completion (or failure) of an asynchronous operation"],
         answer: "an object that represents the eventual completion (or failure) of an asynchronous operation"
         
     }, 
-      {
+    {
         question: "What is the `async/await` syntax in JavaScript used for?",
         choices: ["to create animations on a webpage", "to handle errors in the code", "to make code run faster", "to write asynchronous code that looks synchronous"],
         answer: "to write asynchronous code that looks synchronous"
         
     },
-      {
+    {
         question: "What is the difference between `let` and `var` in JavaScript?",
         choices: ["they are the same", "let is block-scoped and var is function-scoped", "var is block-scoped and let is function-scoped", "there is no difference"],
         answer: "let is block-scoped and var is function-scoped"
         
     },    
-      {
+    {
         question: "What is the difference between `==`, `===`, and `!=` in JavaScript?",
         choices: ["they are all the same", "== compares types and values, === compares only values, and != is the opposite of ==", "== compares only values, === compares types and values, and           != is the opposite of ==", "== compares types and values, === compares only values, and != compares types and values"],
         answer: "== compares types and values, === compares only values, and != is the opposite of =="
         
     },
-      {
+    {
         question: "What is the `spread` syntax in JavaScript used for?",
         choices: ["to create animations on a webpage", "to spread an array into separate arguments", "to handle errors in the code", "to make code run faster"],
         answer: "to spread an array into separate arguments"
         
     },    
-     
 ];
 
 const positiveMessage = [ 
@@ -630,7 +632,8 @@ function showScores() {
     for (let i = startIndex; i < endIndex && i < highScores.length; i++) {
         const { score, initials } = highScores[i];
         const listItem = document.createElement("li");
-        listItem.innerText = `${initials}: ${score}`;
+        const rank = i + 1;
+        listItem.innerHTML = `<span class="rank">${rank}</span><span class="initials">${initials}</span><span class="score">${score}</span>`;
         highScoresList.appendChild(listItem);
     }
 

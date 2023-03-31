@@ -72,6 +72,12 @@ h1 {
     min-width: 100%;
 }
 
+.home-buttons:hover {
+    background-color: #d1b0ff;
+    filter: brightness(130%);
+    color: white;
+}
+
 #quiz-container {
     display: flex;
     flex-direction: column;
@@ -134,7 +140,9 @@ h1 {
 }
 
 .scorelist-buttons:hover {
-    background: rgb(213, 240, 232);
+    background-color: #d1b0ff;
+    filter: brightness(130%);
+    color: white;
 }
 
 #home {
@@ -150,6 +158,8 @@ h1 {
 
 #home:hover {
     background-color: #50c8ae;
+    filter: brightness(130%);
+    color: white;
 }
 
 #backtostart {

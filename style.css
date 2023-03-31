@@ -62,6 +62,7 @@ h1 {
     border-style: solid;
     box-shadow: 0px 0px 5px 2px rgba(197, 187, 187, 0.3);
     color: #4e4545;
+    font-size: 16px
 }
 
 #buttons {
@@ -73,9 +74,10 @@ h1 {
 }
 
 .home-buttons:hover {
-    background-color: #d1b0ff;
+    background-color: #b486f3;
     filter: brightness(130%);
-    color: white;
+    color: rgb(221, 202, 202);
+    font-size: 17px;
 }
 
 #quiz-container {
@@ -98,6 +100,14 @@ h1 {
     border:#cfc9c9;
     box-shadow: 0 5 5 10 black;
     text-align: center;
+}
+
+.answer-btn:hover {
+    background-color: #b486f3;
+    filter: brightness(130%);
+    color: rgb(214, 196, 196);
+    box-shadow: 0 1px 5px 1px white;
+    font-size: 18px;
 }
 
 #u-wrong {
